@@ -19,22 +19,29 @@ const recipeSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'User',
         },
-        ingredient: {
-            type: String,
-            required: 'You must enter an ingredients',
-            minlength: 1,
-            maxlength: 280,
-            value: {
+        // user will be limited by an array of strings from front end
+        ingredient: [
+            {
+                type: String,
+                required: 'You must enter an ingredients',
+                minlength: 1,
+                maxlength: 280,
+            }
+        ],
+        value: [
+            {
                 type: Integer,
                 required: 'You must enter an amount',
-            },
-            unit: {
+            }
+        ],
+        unit: [
+            {
                 type: String,
                 required: 'You need to enter a unit name.',
                 minlength: '1',
                 maxlength: '25',
             },
-        },
+        ],
     }
 );
 
