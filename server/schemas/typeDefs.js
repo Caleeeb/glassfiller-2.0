@@ -13,17 +13,19 @@ const typeDefs = gql`
     definition: String
     user_id: User
     ingredient: [String]
-    value: [Int]
-    unit: [String]
   }
 
+  type Ingredient {
+    name: String
+  }
+  
   type Query {
-    user: [User]
-    recipe: [Recipe]
-  }
-
-  type Mutation {
-
+    users: [User]
+    recipes: [Recipe]
+    ingredients: [Ingredient]
   }
 
 `
+
+
+module.exports = typeDefs;
