@@ -9,7 +9,7 @@ const resolvers = {
     },
     recipes: async () => {
         return await Recipe.find({})
-        .populate('ingredient')
+        .populate('ingredients')
     },
     ingredients: async () => {
       return await Ingredient.find({});

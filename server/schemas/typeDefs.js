@@ -10,8 +10,8 @@ const typeDefs = gql`
   type Recipe {
     title: String
     definition: String
-    user_id: User
-    ingredient: [String]
+    username: String
+    ingredients: [String]
   }
   
   type Ingredient {
@@ -28,11 +28,3 @@ const typeDefs = gql`
   `;
 
 module.exports = typeDefs;
-
-
-
-// type Query {
-//   users: [User]
-//   recipes: [Recipe]
-//   ingredients: [Ingredient]
-// }
