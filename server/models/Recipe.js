@@ -15,13 +15,13 @@ const recipeSchema = new Schema(
             minlength: 1,
             maxlength: 280
         },
-        user_id: {
-            type: Schema.Types.ObjectId,
+        username: {
+            type: String,
             ref: 'User',
         },
         // user will be limited by an array of strings from front end
         ingredients: {
-            type: String,
+            type: [String]
         }
     }
 );

@@ -4,7 +4,6 @@ const IngredientSchema = new Schema({
   name: [
     {
       type: String,
-      required: "You must enter an ingredient",
     },
   ],
 });
