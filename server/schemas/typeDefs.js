@@ -17,13 +17,24 @@ const typeDefs = gql`
   type Ingredient {
     name: [String]
   }
+
+  type Auth {
+    token: ID!
+    user: User
+  }
   
   type Query {
     users: [User]
     recipes: [Recipe]
-    ingredients: [Ingredient]
-    
+    ingredients: [Ingredient] 
   }
+
+  type Mutation {
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+  }
+
+
 
   `;
 
