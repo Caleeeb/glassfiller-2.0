@@ -18,12 +18,9 @@ function Nav() {
           </li>
           <li>
             <a href='/login'>
-              Login
+              Login/Logout
             </a>
           </li>
-          {/* <li>
-            
-          </li> */}
         </ul>
       </nav>
     </header>
