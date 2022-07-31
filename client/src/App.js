@@ -1,32 +1,17 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom'
-// import Login from './components/Login';
-// import Signup from './components/Signup';
-import RecipeList from './components/RecipeList';
-import MyBar from './components/MyBar'
-import Layout from './components/Layout'
+import MyBar from './Pages/MyBar'
+import Home from './Pages/Home'
+import Login from './Pages/Login'
 
-
-// function App() {
-//   return (
-//     <div>
-//       <NavBar></NavBar>
-//       <main>
-//         <RecipeList></RecipeList>
-//         <MyBar></MyBar>
-        
-//       </main>
-
-//     </div>
-//   );
-// }
 
 function App() {
   return (
    <>
     <Routes>
-    <Route path="/" element={<Layout />}/>
-    <Route path="/myBar" element={<MyBar />}/>
+    <Route path="/" element={<Home />}/>
+    <Route path="/Mybar" element={<MyBar />}/>
+    <Route path="/Login" element={<Login />}/>
     </Routes>
    </>
   );
