@@ -1,35 +1,28 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'
-// import Login from './components/Login';
-// import Signup from './components/Signup';
-import RecipeList from './components/RecipeList';
-import MyBar from './components/MyBar'
-import Layout from './components/Layout'
+import './App.scss';
+import { Routes, Route } from 'react-router-dom';
+import MyBar from './Pages/MyBar';
+import Home from './Pages/Home';
+import Login from './Pages/Login';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer'
 
-
-// function App() {
-//   return (
-//     <div>
-//       <NavBar></NavBar>
-//       <main>
-//         <RecipeList></RecipeList>
-//         <MyBar></MyBar>
-        
-//       </main>
-
-//     </div>
-//   );
-// }
 
 function App() {
   return (
-   <>
+    <>
+    <NavBar></NavBar>
+   
     <Routes>
-    <Route path="/" element={<Layout />}/>
-    <Route path="/myBar" element={<MyBar />}/>
+    <Route index element={<Home />} />
+    <Route path="MyBar" element={<MyBar />}/>
+    <Route path="Login" element={<Login />}/>
     </Routes>
+    
+    <Footer></Footer>
    </>
-  );
+  )
 }
+
 
 export default App;
