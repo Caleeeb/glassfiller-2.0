@@ -1,6 +1,6 @@
 import React from 'react';
 
-function RecipeList()  {
+const RecipeList = ({}) => {
 
     return (
         <header>
