@@ -12,7 +12,7 @@ const NavBar = () => (
         exact="true"
         activeclassname="active"
         className="home-nav"
-        to="/home"
+        to="/"
       > 
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
       </NavLink>
