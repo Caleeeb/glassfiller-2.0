@@ -25,12 +25,17 @@ SO THAT I can keep track of my favorite cocktails
 
 
 ## Authors
-* **Caleb Day**
-* **Alex Knight**
-* **Jason Cardenas**
-* **Inglish Foust**
+* **Caleb Day** -- *Original idea, Created Repo, Server Side with Alex* 
+
+* **Alex Knight** -- *Server Side with Caleb, React*
+
+* **Jason Cardenas** -- *Framework, CSS*
+
+* **Inglish Foust** -- *Help with React, ReadMe*
+
 
 ## Deployment
+
 
 ## Technologies Used
 * [Mongo](www.npmjs.com/package/mongodb) - Used for Database
