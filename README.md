@@ -1,6 +1,17 @@
 # Glassfiller 2.0
 
-```Logo goes here```
+![Logo](Glassfiller.png)
+
+## Table of Contents
+
+* [Links](#links)
+* [User Story](#userstory)
+* [Authors](#authors)
+* [Technologies Used](#technologies)
+* [Questions](#questions)
+
+## Links
+
 
 ## User Story
 ```
@@ -29,12 +40,10 @@ SO THAT I can keep track of my favorite cocktails
 
 * **Alex Knight** -- *Server Side with Caleb, React*
 
-* **Jason Cardenas** -- *Framework, CSS*
+* **Jason Cardenas** -- *Framework, Presentation*
 
 * **Inglish Foust** -- *Help with React, ReadMe*
 
-
-## Deployment
 
 
 ## Technologies Used
@@ -44,3 +53,10 @@ SO THAT I can keep track of my favorite cocktails
 * [Node](https://www.npmjs.com/package/node) - Used for developing server-side and networking
 * [Heroku](https://devcenter.heroku.com/categories/reference) - Used for App deployment
 * [Bcrypt](https://www.npmjs.com/package/bcrypt) - Used for Authentication
+
+## Questions
+_Please direct inquiries to any of the key contributors below. _  
+* [Caleb Day](https://github.com/Caleeb)
+* [Alex Knight](https://github.com/Alknight17)
+* [Jason Cardenas](https://github.com/Cardenas1850) 
+* [Inglish Foust](https://github.com/inglish2022) 
