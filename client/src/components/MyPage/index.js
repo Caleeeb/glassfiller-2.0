@@ -2,20 +2,29 @@ import React from "react";
 
 function MyPage() {
   return (
-    <div>
-      <h1>Recipes</h1>
-      <section>
-        <ul>
-          <li>First Recipe</li>
-          <li>Second Recipe</li>
-          <li>Third Recipe</li>
-          <li>
-            <a href="/add-recipe" role="button">
-              Add Recipe at My Bar
-            </a>
-          </li>
-        </ul>
-      </section>
+<div className="all-cards">
+      <h1>My Saved Recipes</h1>
+      <div className="card">
+       
+        <div className="card-container">
+          <h4>Drink-Name</h4>
+          <p>Drink description or list of drink ingredients</p>
+        </div>
+      </div>
+      <div className="card">
+        
+        <div className="card-container">
+          <h4>Drink-Name</h4>
+          <p>Drink description or list of drink ingredients</p>
+        </div>
+      </div>
+      <div className="card">
+        
+        <div className="card-container">
+          <h4>Drink-Name</h4>
+          <p>Drink description or list of drink ingredients</p>
+        </div>
+      </div>
     </div>
   );
 };
