@@ -19,7 +19,7 @@ function MyPage() {
         </div>
       </div>
       <div className="card">
-        <img src="../images/screwdriver.wep" alt="A screwdriver, the drink not the tool" ></img>
+        <img src="../images/screwdriver.webp" alt="A screwdriver, the drink not the tool" ></img>
         <div className="card-container">
           <h4>Drink-Name</h4>
           <p>Drink description or list of drink ingredients</p>
