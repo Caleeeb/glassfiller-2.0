@@ -42,12 +42,12 @@ const Login = (props) => {
 
 return (
     <main>
-        <div>
-            <div className='card'>
-                <h3 className='card-header'>Login</h3>
-                <div className='card-body'>
-                <form onSubmit={handleFormSubmit}>
-                <input
+      <div className='login-form'>
+<form>
+<h1>Login</h1>
+<div className="content">
+<div className="input-field">
+<input
                 className="form-input"
                 placeholder="Your email"
                 name="email"
@@ -56,7 +56,9 @@ return (
                 value={formState.email}
                 onChange={handleChange}
               />
-              <input
+</div>
+<div className="input-field">
+<input
                 className="form-input"
                 placeholder="******"
                 name="password"
@@ -65,15 +67,15 @@ return (
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button type='submit'>
-                Submit
-              </button>
-              </form>
+</div>
 
-              {error && <div>Login failed</div>}
-                </div>
-            </div>
-        </div>
+</div>
+<div className="action">
+<button><a href="./" className="./signup">Signup Here</a></button>
+<button>Sign in</button>
+</div>
+</form>
+</div>  
     </main>
 );
 };

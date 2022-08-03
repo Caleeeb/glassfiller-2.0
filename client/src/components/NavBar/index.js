@@ -1,5 +1,5 @@
 import React from "react";
-import './index.scss';
+
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBeer, faHome, faLaptop} from "@fortawesome/free-solid-svg-icons";
@@ -7,33 +7,30 @@ import { faBeer, faHome, faLaptop} from "@fortawesome/free-solid-svg-icons";
 
 
 const NavBar = () => (
-  <header className="flex-row px-1 myb-1">
+  <header>
+    <img className="logo" src="../images/Glassfiller.png" alt="Glassfiller logo" />
     <nav>
-      <ul className="flex-row">
-        <li className="mx-2">
-      <NavLink
+      <ul className="nav__links">
+        <li>
+        <NavLink
         exact="true"
         activeclassname="active"
         className="home-nav"
         to="/home"
       > 
-      
-     
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-      </NavLink>
-</li>
-<li className="mx-2">
-      <NavLink
+      </NavLink>Home
+        </li>
+        
+        <li><NavLink
         exact="true"
         activeclassname="active"
         className="mybar-nav"
         to="/mybar"
       >
         <FontAwesomeIcon icon={faBeer} color="#4d4d4e" />
-      </NavLink>
-      </li>
-
-      <li className="mx-2">
+      </NavLink>My Bar</li>
+      <li>
       <NavLink
         exact="true"
         activeclassname="active"
@@ -41,11 +38,10 @@ const NavBar = () => (
         to="/login"
       >
         <FontAwesomeIcon icon={faLaptop} color="#4d4d4e" />
-      </NavLink> 
-      </li> 
+      </NavLink>Login 
+      </li>
       </ul>
-      
-    </nav>
+      </nav> 
   </header>
 );
 
