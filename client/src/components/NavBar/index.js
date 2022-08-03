@@ -2,7 +2,7 @@ import React from "react";
 import './index.scss';
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome} from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -15,7 +15,7 @@ const NavBar = () => (
         activeclassname="active"
         className="home-nav"
         to="/"
-      > 
+      >
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
       </NavLink>
 
@@ -33,6 +33,14 @@ const NavBar = () => (
         activeclassname="active"
         className="login-nav"
         to="/login"
+      >
+        <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+      </NavLink>
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="signup-nav"
+        to="/signup"
       >
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
       </NavLink>
