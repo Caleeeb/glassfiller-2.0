@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import MyBar from './pages/MyBar';
 import Home from './pages/Home.js';
 import Login from './pages/Login';
