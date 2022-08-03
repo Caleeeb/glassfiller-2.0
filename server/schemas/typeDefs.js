@@ -44,7 +44,6 @@ const typeDefs = gql`
       username: String
       ingredients: [String]
     }
-    
     `;
 
 module.exports = typeDefs;
