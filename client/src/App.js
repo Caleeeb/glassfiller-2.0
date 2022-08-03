@@ -46,7 +46,7 @@ function App() {
       <Route exact path="/login" element={<Login />}/>
     
     </Routes>
-    <h1>Hello</h1>
+   
     <Footer />
     
     </div>
