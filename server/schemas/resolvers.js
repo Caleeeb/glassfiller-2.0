@@ -1,5 +1,7 @@
 const { User, Recipe } = require("../models");
 const Ingredient = require("../models/Ingredient");
+const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
     Query: {
@@ -23,6 +25,13 @@ const resolvers = {
 
             return { token, user };
         },
+        addUser: async (parent, args) => {
+            const user = await User.create(args);
+            const token = signToken(user);
+
+            return { token, user };
+        },
+
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
 

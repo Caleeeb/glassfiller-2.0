@@ -3,6 +3,7 @@
         "username": "Horse Man",
         "email": "horses@stable.com",
         "password": "horsies",
-        "recipes": []
+        "recipes": [],
+        "_id": "1"
     }
 ]
