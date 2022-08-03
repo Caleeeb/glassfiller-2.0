@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome} from "@fortawesome/free-solid-svg-icons";
 
 
+
+
 const NavBar = () => (
-  <header>
+  <div>
     <nav>
       <NavLink
         exact="true"
@@ -35,7 +37,7 @@ const NavBar = () => (
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
       </NavLink>
     </nav>
-  </header>
+  </div>
 );
 
 export default NavBar;

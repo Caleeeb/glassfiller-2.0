@@ -16,8 +16,9 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_RECIPES = gql`
-    query recipes($username: String!) {
-        recipes(username: $username) {
+    query {
+        recipes {
+            _id
             title
             definition
             username
@@ -37,3 +38,15 @@ export const QUERY_RECIPE = gql`
         }
     }
 `;
+
+
+// export const QUERY_RECIPES = gql`
+//     query recipes($username: String!) {
+//         recipes(username: $username) {
+//             title
+//             definition
+//             username
+//             ingredients
+//         }
+//     }
+// `;
