@@ -53,10 +53,11 @@ function RecipeForm() {
   }
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form className="login-form" onSubmit={handleFormSubmit}>
       <label>
         Recipe Title:
-        <input value={formData.title} type="text" name="title" onChange={handleChange} />
+        <br />
+        <input value={formData.title} type="text" name="title" onChange={handleChange} className="input-field" />
       </label>
       <p
         className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
@@ -64,17 +65,19 @@ function RecipeForm() {
         Character Count: {characterCount}/280
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
-      <label>
+      <label >
         Cocktail Definition:
+        <br />
         <textarea
           placeholder="Decribe your cocktail:"
           defaultValue={formData.definition}
-          className="definition"
+          className="definition input-field"
           onChange={handleChange}
         />
       </label>
-
-      <input type="submit" value="Submit" />
+      
+      <input type="submit" value="Submit" className="action" />
+      
     </form>
   );
 };
