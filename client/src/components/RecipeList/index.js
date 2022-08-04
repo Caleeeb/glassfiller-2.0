@@ -6,19 +6,19 @@ const RecipeList = ({ recipes, title }) => {
   const [show, setShow] = useState(true);
 
   return (
-    <main className="all-cards meow">
-      <div className="card-container meow">
+    <main className="all-cards">
+      <div className="card-container">
         <h1>{title}</h1>
         {recipes &&
           recipes.map((recipe) => (
             <div key={recipe._id} className="card">
-              <p className=""> {recipe.title} </p>
+              <div className="card-content"> 
+              <p> {recipe.title} </p>
               <p>{recipe.definition}</p>
 
               {show ? (
                 <div>
-                 
-                  <p className=""><FontAwesomeIcon icon={faUser} color="#4d4d4e" /><br />Recipe Submitted by: {recipe.username} </p>
+                  <p><FontAwesomeIcon icon={faUser} color="#4d4d4e" /><br />Recipe Submitted by: {recipe.username} </p>
                   <ul>
                     {recipe.ingredients.map((ingredient, i) => (
                       <li> {ingredient}</li>
@@ -26,6 +26,7 @@ const RecipeList = ({ recipes, title }) => {
                   </ul>
                 </div>
               ) : null}
+              </div>
               <div className="button-container"> 
               <div className="button-center"> 
                 <button className="action" key={recipe._id} onClick={() => setShow(!show)}>
