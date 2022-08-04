@@ -1,6 +1,7 @@
 const express = require('express');
 const {ApolloServer} = require('apollo-server-express');
 const path = require('path');
+const mongoose = require('mongoose');
 
 const {typeDefs, resolvers} = require('./schemas');
 const {authMiddleware} = require('./utils/auth');
@@ -13,10 +14,10 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:3001/Glassfiller2', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Glassfiller2', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
 
 const app = express();
 
