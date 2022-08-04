@@ -29,8 +29,16 @@ const RecipeList = ({ recipes, title }) => {
                             </button>
                         </div>
                     ))}
-            </div>
-        </main>
+            </ul>
+        </div>
+    ) : null
+}
+
+<button key={recipe._id} onClick={() => setShow(!show)}>
+    Toggle
+</button>
+            </div >
+        </main >
     );
 };
 
