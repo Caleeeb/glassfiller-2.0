@@ -9,7 +9,6 @@ const Home = () => {
     // console.log(user)
     const { loading, data } = useQuery(QUERY_RECIPES, /*{variables: {username: "Horse Man" }}*/);
     const recipes = data?.recipes || [];
-    console.log(recipes)
     return (
         <main>
             <h1>Home</h1>
@@ -20,7 +19,6 @@ const Home = () => {
                 ) : (
                     <RecipeList
                         recipes={recipes}
-                        title=""
                     />
                 )}
             </div>
