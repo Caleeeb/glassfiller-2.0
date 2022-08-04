@@ -30,7 +30,7 @@ function RecipeForm() {
 
     try {
       await addRecipe({
-        variables: { ...formData, title, definition },
+        variables: { ...formData,  },
       });
 
       // clear form value
@@ -40,13 +40,6 @@ function RecipeForm() {
       console.error(e);
     }
   };
-
-  // update state based on the forms input changes
-  // const handleCounterChange = event => {
-  //   if (event.target.value.length <= 280) {
-  //     setCharacterCount(event.target.value.length);
-  //   }
-  // };
 
   function handleChange(event) {
     const value = event.target.value;
@@ -85,5 +78,6 @@ function RecipeForm() {
     </form>
   );
 };
+
 
 export default RecipeForm;
