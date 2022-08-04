@@ -8,7 +8,7 @@ const typeDefs = gql`
     password: String
     recipes: [Recipe]
   }
-
+  
   type Recipe {
     _id: ID
     title: String
@@ -17,9 +17,17 @@ const typeDefs = gql`
     ingredients: [String]
   }
   
+  input RecipeInput {
+    title: String
+    definition: String
+    username: String
+    ingredients: [String]
+  }
+
   type Ingredient {
     name: [String]
   }
+  
 
   type Auth {
     token: ID!
@@ -37,14 +45,6 @@ const typeDefs = gql`
       addUser(username: String!, email: String!, password: String!): Auth
       addRecipe(input: RecipeInput): Recipe
     }
-    
-    input RecipeInput {
-      title: String
-      definition: String
-      username: String
-      ingredients: [String]
-    }
     `;
 
 module.exports = typeDefs;
-

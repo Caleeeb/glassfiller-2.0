@@ -1,31 +1,37 @@
-import React from 'react';
+import React, { useState } from "react";
 
+const RecipeList = ({ recipes, title }) => {
+    const [show, setShow] = useState(true);
 
-
-    const RecipeList = ({ recipes, title }) => {
-        if (!recipes.length) {
-            return <h3>No Recipes Yet</h3>
-        }
-
-        return (
-            <main>
+    return (
+        <main>
             <div>
-                <h1>
-                    {title}
-                </h1>
+                <h1>{title}</h1>
                 {recipes &&
-                    recipes.map(recipe => (
+                    recipes.map((recipe, i) => (
                         <div key={recipe._id} className="">
                             <p className=""> {recipe.title} </p>
                             <p>{recipe.definition}</p>
+
+                            {show ? (
+                                <div>
+                                    <p className="">Recipe Submitted by: {recipe.username} </p>
+                                    <ul>
+                                        {recipe.ingredients.map((ingredient, i) => (
+                                            <li> {ingredient}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ) : null}
+
+                            <button key={recipe._id} onClick={() => setShow(!show)}>
+                                Toggle
+                            </button>
                         </div>
                     ))}
             </div>
-            </main>
-        )
-    }
-
-
+        </main>
+    );
+};
 
 export default RecipeList;
-

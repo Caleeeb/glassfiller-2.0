@@ -23,3 +23,14 @@ export const ADD_USER = gql`
     }
   }
   `;
+
+export const ADD_RECIPE = gql`
+  mutation addRecipe($title: String!, $definition: String!, $username: String!, $ingredients: String!) {
+    addRecipe(title: $title, definition: $definition, username: $username, ingredients: $ingredients){
+    title
+    definition
+    username
+    ingredients
+    }
+  }
+  `

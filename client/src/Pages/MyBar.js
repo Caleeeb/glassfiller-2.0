@@ -1,10 +1,10 @@
-import MyPage from '../components/MyPage';
+import RecipeForm from '../components/RecipeForm';
 import React from 'react';
 
 const MyBar = () => {
     return (
         <main>
-            <MyPage></MyPage>
+            <RecipeForm></RecipeForm>
         </main>
     )
 }
