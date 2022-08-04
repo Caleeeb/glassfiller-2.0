@@ -40,10 +40,10 @@ const Signup = () => {
     return (
         <main>
             <div>
-                <div>
-                    <div className="card">
-                        <h4 className="card-header">Sign Up</h4>
-                        <div className="card-body">
+                <div className="login-form">
+                    <div className="content">
+                        <h4>Sign Up</h4>
+                        <div className="input-field">
                             <form onSubmit={handleFormSubmit}>
                                 <input
                                     className="form-input"
@@ -72,9 +72,11 @@ const Signup = () => {
                                     value={formState.password}
                                     onChange={handleChange}
                                 />
+                                <div className="action">
                                 <button type="submit">
                                     Submit
-                                </button>
+                                </button>    
+                                </div>                                
                             </form>
                             {error && <div>Signup failed</div>}
                         </div>
