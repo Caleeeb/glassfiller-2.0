@@ -1,21 +1,24 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const RecipeList = ({ recipes, title }) => {
   const [show, setShow] = useState(true);
 
   return (
-    <main>
-      <div>
+    <main className="all-cards">
+      <div className="card-container">
         <h1>{title}</h1>
         {recipes &&
           recipes.map((recipe) => (
-            <div key={recipe._id} className="">
-              <p className=""> {recipe.title} </p>
+            <div key={recipe._id} className="card">
+              <div className="card-content"> 
+              <p> {recipe.title} </p>
               <p>{recipe.definition}</p>
 
               {show ? (
                 <div>
-                  <p className="">Recipe Submitted by: {recipe.username} </p>
+                  <p><FontAwesomeIcon icon={faUser} color="#4d4d4e" /><br />Recipe Submitted by: {recipe.username} </p>
                   <ul>
                     {recipe.ingredients.map((ingredient, i) => (
                       <li> {ingredient}</li>
@@ -23,10 +26,14 @@ const RecipeList = ({ recipes, title }) => {
                   </ul>
                 </div>
               ) : null}
-
-              <button key={recipe._id} onClick={() => setShow(!show)}>
-                Toggle
+              </div>
+              <div className="button-container"> 
+              <div className="button-center"> 
+                <button className="action" key={recipe._id} onClick={() => setShow(!show)}>
+                Show Recipe
               </button>
+              </div>
+              </div>  
             </div>
           ))}
       </div>
