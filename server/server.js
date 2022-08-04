@@ -13,6 +13,11 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:3001/Glassfiller2', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
